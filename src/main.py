@@ -1,4 +1,4 @@
-from .catalog import Catalog, Classroom
+from .catalog import Catalog, CatalogError, Classroom
 from .constants import DEFAULT_FILE
 
 
@@ -31,4 +31,8 @@ def main() -> None:
 
 
 if __name__ == "__main__":
-    main()
+    try:
+        main()
+    except CatalogError as error:
+        print("Ошибка:", error)
+        raise SystemExit(2)
