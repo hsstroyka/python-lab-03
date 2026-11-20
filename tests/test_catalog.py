@@ -75,8 +75,7 @@ def test_valid_boundaries(year: int) -> None:
 
 def test_frozen_classroom() -> None:
     with pytest.raises(FrozenInstanceError):
-        setattr(make_room(), "item_id", "changed")
-
+        make_room().item_id = "changed"
 
 def test_add_get_remove() -> None:
     catalog = Catalog()

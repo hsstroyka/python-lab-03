@@ -45,7 +45,7 @@ lab_03/
 
 **Создание виртуального окружения.** Если в папке проекта ещё нет `.venv`, выполни команду в PowerShell.
 
-```powershell
+```
 python -m venv .venv
 ```
 
@@ -53,7 +53,7 @@ python -m venv .venv
 
 **Запуск программы.**
 
-```powershell
+```
 python -m src.main
 ```
 
@@ -119,28 +119,25 @@ print("a101" in catalog)
 
 **Ручная установка пакетов для тестов и проверок.**
 
-```powershell
+```
 python -m pip install pytest-cov ruff
 ```
 
 **Запуск тестов.**
 
-```powershell
-python -m pytest -q
+```
+python -m pytest 
 ```
 
 **Проверка покрытия кода тестами.**
 
-```powershell
-python -m pytest --cov=src --cov-report=term-missing -q
 ```
-
-Строка `TOTAL` показывает общий процент покрытия, а столбец `Missing`
-содержит номера строк, которые тесты не выполнили.
+python -m pytest --cov=src
+```
 
 **Проверка стиля.**
 
-```powershell
+```
 python -m ruff check .
 ```
 
