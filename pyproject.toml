@@ -1,0 +1,10 @@
+[project]
+name = "labs"
+version = "0.1.0"
+description = "Каталог учебных аудиторий"
+requires-python = ">=3.12"
+dependencies = ["pytest>=8.4.2"]
+
+[tool.pytest.ini_options]
+pythonpath = ["."]
+testpaths = ["tests"]
